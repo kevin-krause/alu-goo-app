@@ -1,3 +1,9 @@
 .container {
     padding: 36px;
 }
+
+.container .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,22 @@
+.card {
+}
+
+.card img {
+    margin-top: 10px;
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.card h4 {
+    margin-top: 0px;
+}
+
+.card p {
+    margin-top: -16px;
+}
+
+.minorText {
+    color: rgb(109, 109, 109);
+}

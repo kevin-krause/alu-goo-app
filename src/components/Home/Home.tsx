@@ -1,3 +1,4 @@
+import Cards from '../Cards/Cards'
 import Header from '../Header/Header'
 import './Home.css'
 
@@ -8,10 +9,10 @@ const Home = () => {
         <div>
             <Header />
             <div className="container">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Architecto corporis voluptas quo optio amet non consequatur
-                saepe ratione deleniti deserunt animi dolor aspernatur esse
-                quisquam, cupiditate minus dolores quasi suscipit!
+                <div className="cards">
+                    <Cards />
+                    <Cards />
+                </div>
             </div>
         </div>
     )
