@@ -6,9 +6,9 @@ const Header = () => {
     return (
         <div className="container">
             <div className="mainHeader">
-                <div>Logo</div>
+                <div>alu.goo</div>
                 <div className="searchbar">
-                    <img src="#" alt="logo" />
+                    <img src="/" alt="🔍" />
                     <input type="text"></input>
                 </div>
                 <button className="button">Anuncie seus itens</button>

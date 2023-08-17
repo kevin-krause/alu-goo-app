@@ -2,6 +2,13 @@
     padding: 10px;
 }
 
+@media (max-width: 768px) {
+    .card {
+        border-bottom: 1px #222222 solid;
+        width: 100%;
+    }
+}
+
 .card img {
     margin-top: 10px;
     width: 300px;

@@ -4,12 +4,27 @@
 
 .container .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 40px;
 }
 
 @media (max-width: 768px) {
     .container .cards {
-        grid-template-columns: auto !important;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px #222222 solid;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .container .cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -18,7 +18,35 @@ const listaCardsTemp = [
         avaliable: '16/08/2023',
         price: 100.5,
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
-    }
+    },
+    {
+        title: 'JBL',
+        address: 'Porto Alegre',
+        avaliable: '20/12/2023',
+        price: 23,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAq5Ub4PE6SNBIdWgp6eK0vCKAmebMvHT_A&usqp=CAU'
+    },
+    {
+        title: 'JBL',
+        address: 'Flamengo',
+        avaliable: '16/08/2023',
+        price: 100.5,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
+    },
+    {
+        title: 'JBL',
+        address: 'Porto Alegre',
+        avaliable: '20/12/2023',
+        price: 23,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAq5Ub4PE6SNBIdWgp6eK0vCKAmebMvHT_A&usqp=CAU'
+    },
+    {
+        title: 'JBL',
+        address: 'Flamengo',
+        avaliable: '16/08/2023',
+        price: 100.5,
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
+    },
 ]
 
 const Home: React.FC = () => {
