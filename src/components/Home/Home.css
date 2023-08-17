@@ -3,7 +3,13 @@
 }
 
 .container .cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .container .cards {
+        grid-template-columns: auto !important;
+    }
 }

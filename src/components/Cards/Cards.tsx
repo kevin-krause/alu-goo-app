@@ -1,19 +1,24 @@
 import React from 'react'
 import './Cards.css'
 
-const Cards = () => {
+interface CardsProps {
+    title: string
+    address: string
+    avaliable: string
+    price: number | null
+    image: string
+}
+
+const Cards: React.FC<CardsProps> = props => {
     return (
         <div className="card">
-            <img
-                src="https://avatars.githubusercontent.com/u/80826558?v=4"
-                alt="item"
-            />
-            <h4>Marido de aluguel</h4>
+            <img src={props.image} alt="item" />
+            <h4>{props.title}</h4>
             <div className="minorText">
-                <p>282 km de distância</p>
-                <p>20 - 25 agosto</p>
+                <p>{props.address}</p>
+                <p>{props.avaliable}</p>
             </div>
-            <p>R$139,70 por dia</p>
+            <p>R${props.price}</p>
         </div>
     )
 }
