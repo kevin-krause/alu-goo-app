@@ -27,16 +27,13 @@ Welcome to our Event Equipment Rental App! This application allows users to easi
 We welcome contributions from the open-source community! If you'd like to contribute, feel free to fork this repository and submit pull requests. If you encounter any issues or have ideas for improvement, please open an issue in the repository.
 
 📝 How to Run:
-1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2. Navigate to the project directory: `cd your-repo`
-3. Install dependencies: `npm install`
-4. Start the app: `npm start`
-5. Open your browser and visit: `http://localhost:3000`
+1. Clone the repository: `git clone https://github.com/kevin-krause/alu-goo-app.git`
+2. Install dependencies: `npm install`
+3. Start the app: `npm start`
+4. Open your browser and visit: `http://localhost:3000`
 
-🔗 Live Demo:
-[Insert live demo link here]
 
 📧 Contact Us:
-For any inquiries or feedback, please reach out to [your-email@example.com].
+For any inquiries or feedback, please reach out to [contatokevinkrause@gmail.com].
 
 Happy event planning and equipment renting! 🎤🎧🎈
