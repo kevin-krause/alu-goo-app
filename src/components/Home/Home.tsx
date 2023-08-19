@@ -1,8 +1,8 @@
+import React from 'react'
+import './Home.css'
 import Cards from '../Cards/Cards'
 import Header from '../Header/Header'
-import './Home.css'
 
-import React from 'react'
 
 const listaCardsTemp = [
     {

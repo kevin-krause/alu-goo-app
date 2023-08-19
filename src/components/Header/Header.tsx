@@ -1,6 +1,7 @@
 import React from 'react'
 import './Header.css'
-import Login from './Login/Login'
+import { Link } from 'react-router-dom'
+import Login from '../Login/LoginButton'
 
 const Header = () => {
     return (
@@ -16,7 +17,7 @@ const Header = () => {
             </div>
 
             <div className="cabecalho">
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
                 <a href="/">Booking and Checkout</a>
                 <a href="/">Listing Page</a>
                 <a href="/">Wishlist</a>
