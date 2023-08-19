@@ -1,5 +1,9 @@
 .card {
     padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -9,35 +13,34 @@
     }
 }
 
+.card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 .card img {
-    margin-top: 10px;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 2px 18px 32px 4px rgba(230, 230, 230, 0.555);
+    width: 200px;
+    max-height: 200px;
+    border-radius: 10px 10px 0 0;
     object-fit: cover;
-    background-size: cover;
-    transition-delay: 0.05s;
+    border-bottom: 2px solid black;
 }
 
-.card img:hover {
-    margin-top: 10px;
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 2px 18px 32px 4px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
-    background-size: cover;
+.card-content {
+    padding: 10px;
 }
 
-.card h4 {
-    margin-top: 3px;
+.card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 5px 0;
 }
 
 .card p {
-    margin-top: -17px;
+    margin: 0;
+    padding: 2px 0;
 }
 
 .minorText {
     color: rgb(109, 109, 109);
+    font-size: 0.8rem;
 }

@@ -5,7 +5,7 @@ interface CardsProps {
     title: string
     address: string
     avaliable: string
-    price: number | null
+    price: string | null
     image: string
 }
 
@@ -18,7 +18,7 @@ const Cards: React.FC<CardsProps> = props => {
                 <p>{props.address}</p>
                 <p>{props.avaliable}</p>
             </div>
-            <p>R${props.price}</p>
+            <p>{props.price}</p>
         </div>
     )
 }

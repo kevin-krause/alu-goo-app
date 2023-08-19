@@ -2,10 +2,17 @@
     padding: 36px;
 }
 
+.cardBackground {
+    background-color: rgba(199, 199, 199, 0.268);
+    border-radius: 16px;
+    min-height: 100vh;
+}
+
 .container .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    
 }
 
 @media (max-width: 768px) {

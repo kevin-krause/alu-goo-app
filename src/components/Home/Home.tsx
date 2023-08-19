@@ -3,55 +3,61 @@ import './Home.css'
 import Cards from '../Cards/Cards'
 import Header from '../Header/Header'
 
-
 const listaCardsTemp = [
     {
-        title: 'JBL',
+        title: 'Volvo XC60 T5 RDesign- TOP',
         address: 'Porto Alegre',
         avaliable: '20/12/2023',
-        price: 23,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAq5Ub4PE6SNBIdWgp6eK0vCKAmebMvHT_A&usqp=CAU'
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
     },
     {
-        title: 'JBL',
-        address: 'Flamengo',
-        avaliable: '16/08/2023',
-        price: 100.5,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
-    },
-    {
-        title: 'JBL',
+        title: 'Volvo XC60 T5 RDesign- TOP',
         address: 'Porto Alegre',
         avaliable: '20/12/2023',
-        price: 23,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAq5Ub4PE6SNBIdWgp6eK0vCKAmebMvHT_A&usqp=CAU'
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
     },
     {
-        title: 'JBL',
-        address: 'Flamengo',
-        avaliable: '16/08/2023',
-        price: 100.5,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
-    },
-    {
-        title: 'JBL',
+        title: 'Volvo XC60 T5 RDesign- TOP',
         address: 'Porto Alegre',
         avaliable: '20/12/2023',
-        price: 23,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZAq5Ub4PE6SNBIdWgp6eK0vCKAmebMvHT_A&usqp=CAU'
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
     },
     {
-        title: 'JBL',
-        address: 'Flamengo',
-        avaliable: '16/08/2023',
-        price: 100.5,
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMF8ahYLzCNFcRWw9GCP4oN46RXJVoO6P0A&usqp=CAU'
+        title: 'Volvo XC60 T5 RDesign- TOP',
+        address: 'Porto Alegre',
+        avaliable: '20/12/2023',
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
+    },
+    {
+        title: 'Volvo XC60 T5 RDesign- TOP',
+        address: 'Porto Alegre',
+        avaliable: '20/12/2023',
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
+    },
+    {
+        title: 'Volvo XC60 T5 RDesign- TOP',
+        address: 'Porto Alegre',
+        avaliable: '20/12/2023',
+        price: 103000,
+        image: 'https://img.olx.com.br/images/45/455332547318913.jpg'
     },
 ]
 
-const Home: React.FC = () => {
+const Home: React.FC = (props: any) => {
+    const formatCurrency = (value: number) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(value)
+    }
+
     return (
-        <div>
+        <div className='cardBackground'>
             <Header />
             <div className="container">
                 <div className="cards">
@@ -61,7 +67,7 @@ const Home: React.FC = () => {
                             title={card.title}
                             address={card.address}
                             avaliable={card.avaliable}
-                            price={card.price}
+                            price={formatCurrency(card.price)}
                             image={card.image}
                         />
                     ))}
