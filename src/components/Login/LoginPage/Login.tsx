@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Login: React.FC = () => {
     const navigate = useNavigate()
@@ -90,6 +91,9 @@ const Login: React.FC = () => {
                                 {buttonText}
                             </button>
                         </form>
+                        <Link to="/singup" className="createAcountLogin">
+                            Cadastre-se
+                        </Link>
                     </div>
                 </div>
             </div>

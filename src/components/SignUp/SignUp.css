@@ -1,0 +1,124 @@
+/* SignUp.css */
+
+.containerCadastro {
+    padding: 36px;
+    background: rgb(255, 193, 242);
+    background: radial-gradient(
+        circle,
+        rgba(141, 4, 4, 0.539) 0%,
+        rgba(255, 77, 107, 0.552) 52%,
+        rgb(209, 63, 63) 100%
+    );
+}
+
+.cadastroBox {
+    margin-top: -150px;
+}
+
+.subContainerCadastro {
+    margin: -20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide subContainerCadastro into two columns */
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(240, 240, 240, 0.127);
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.bannerCadastro img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.formCadastro {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 80px 40px 80px;
+    margin: 30px 80px 50px 235px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 50px 50px; /* Rounded right edge */
+    color: white; /* Text color */
+}
+
+.formCadastro h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: black;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.517);
+    display: block;
+}
+
+.formInputsCadastro h5 {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: -0px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+
+.formInputsCadastro {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+}
+
+.formInputsCadastro input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border-top: 2px solid rgba(255, 0, 0, 0.517);
+}
+
+.formInputsCadastro button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.createAcountCadastro {
+    font-size: 16px;
+    margin-top: 14px;
+    text-decoration: none;
+    color: #00000094;
+}
+
+.createAcountCadastro:hover {
+    text-decoration: underline;
+    color: #891919da;
+}
+
+.formContainerCadastro:hover .formCadastro {
+    box-shadow: 0px 0px 1px 4px #891919;
+}
+
+.formInputsCadastro button:hover {
+    background-color: #891919da;
+    box-shadow: 0px 0px 1px 4px #89191955;
+    color: #ffffff;
+}
+
+.identificationToggle {
+    display: grid (2, 1fr);
+    grid-column: 2;
+    margin: 10px 0;
+    font-size: 2px;
+}
+
+.toggleIdentification {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
