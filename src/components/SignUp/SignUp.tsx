@@ -22,11 +22,20 @@ const Cadastro: React.FC = () => {
         }))
     }
 
-    const handleIdentificationChange = () => {
+    const handleIdentificationChange = (identifier: string) => {
         setFormData(prevData => ({
             ...prevData,
-            isCnpj: !prevData.isCnpj,
+            isCnpj: identifier === 'cnpj',
             identification: ''
+        }))
+    }
+
+    const handleDocumentTypeChange = (identifier: string) => {
+        setFormData(prevData => ({
+            ...prevData,
+            isCnpj: identifier === 'cnpj',
+            identification: '',
+            identifier // Add this line to set the selected identifier (cnpj or cpf)
         }))
     }
 
@@ -72,76 +81,67 @@ const Cadastro: React.FC = () => {
 
     return (
         <div className="containerCadastro">
-            <div className="subContainerCadastro">
-                <div className="cadastroBox">
-                    <div className="formCadastro">
-                        <h3>Cadastro</h3>
-                        <form
-                            className="formInputsCadastro"
-                            onSubmit={handleSubmit}
+            <div className="formCadastro">
+                <h3>Cadastro</h3>
+                <form className="formInputsCadastro" onSubmit={handleSubmit}>
+                    <h5>Nome Completo</h5>
+                    <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Nome Completo"
+                        value={formData.fullName}
+                        onChange={handleInputChange}
+                    />
+                    <h5>Email</h5>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                    />
+                    <h5>Senha</h5>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Senha"
+                        value={formData.password}
+                        onChange={handleInputChange}
+                    />
+                    <h5>Documento </h5>
+                    <div className="identificationToggle">
+                        <button
+                            type="button"
+                            onClick={() => handleIdentificationChange('cnpj')}
+                            className="toggleIdentification"
                         >
-                            <h5>Nome Completo</h5>
-                            <input
-                                type="text"
-                                name="fullName"
-                                placeholder="Nome Completo"
-                                value={formData.fullName}
-                                onChange={handleInputChange}
-                            />
-                            <h5>Email</h5>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                            />
-                            <h5>Senha</h5>
-                            <input
-                                type="password"
-                                name="password"
-                                placeholder="Senha"
-                                value={formData.password}
-                                onChange={handleInputChange}
-                            />
-                            <h5>Tipo de Identificação</h5>
-                            <div className="identificationToggle">
-                                <button
-                                    type="button"
-                                    onClick={handleIdentificationChange}
-                                    className={`toggleIdentification${
-                                        formData.isCnpj ? 'active' : ''
-                                    }`}
-                                >
-                                    CNPJ
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={handleIdentificationChange}
-                                    className="toggleIdentification"
-                                >
-                                    CPF
-                                </button>
-                            </div>
-                            <input
-                                type="text"
-                                className="identification"
-                                placeholder={formData.isCnpj ? 'CNPJ' : 'CPF'}
-                                value={formData.identification}
-                                onChange={handleInputChange}
-                            />
-                            <button
-                                id="submitBtn"
-                                type="submit"
-                                onMouseOver={handleMouseOver}
-                                onMouseOut={handleMouseOut}
-                                className="button"
-                            >
-                                {buttonText}
-                            </button>
-                        </form>
+                            CNPJ
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => handleIdentificationChange('cpf')}
+                            className="toggleIdentification"
+                        >
+                            CPF
+                        </button>
                     </div>
-                </div>
+                    <input
+                        type="number"
+                        className="identification"
+                        placeholder={formData.isCnpj ? 'CNPJ' : 'CPF'}
+                        value={formData.identification}
+                        onChange={handleInputChange}
+                    />
+                    <button
+                        id="submitBtn"
+                        type="submit"
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                        className="button"
+                    >
+                        {buttonText}
+                    </button>
+                </form>
             </div>
         </div>
     )
