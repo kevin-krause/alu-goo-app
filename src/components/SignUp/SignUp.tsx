@@ -59,7 +59,7 @@ const Cadastro: React.FC = () => {
                 identification: formData.identification
             }
 
-            // Aqui você pode realizar a requisição para a API de cadastro, por exemplo usando fetch ou axios
+            // requisição para a API de cadastro
             // await fetch('sua_url_da_api', {
             //     method: 'POST',
             //     headers: {
@@ -67,8 +67,6 @@ const Cadastro: React.FC = () => {
             //     },
             //     body: JSON.stringify(userData)
             // })
-
-            // Depois de enviar para a API, você pode redirecionar o usuário para a próxima página
             onCadastro()
         } catch (error) {
             console.error('Erro ao enviar os dados para a API:', error)
