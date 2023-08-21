@@ -38,7 +38,7 @@ const Login: React.FC = () => {
                 password: formData.password
             }
 
-            // Aqui você pode realizar a requisição para a API, por exemplo usando fetch ou axios
+            // requisição para a API
             // await fetch('sua_url_da_api', {
             //     method: 'POST',
             //     headers: {
@@ -46,8 +46,6 @@ const Login: React.FC = () => {
             //     },
             //     body: JSON.stringify(userData)
             // })
-
-            // Depois de enviar para a API, você pode redirecionar o usuário para a próxima página
             onLogin()
         } catch (error) {
             console.error('Erro ao enviar os dados para a API:', error)
