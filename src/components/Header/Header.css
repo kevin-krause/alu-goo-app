@@ -14,12 +14,19 @@
     align-items: center;
 }
 
+.iconHeader {
+    margin-right: 5px;
+}
+
 .cabecalho a {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 15px;
     margin-bottom: -15px;
     color: #ffffff;
     text-decoration: none;
-    padding: 10px;
     border: 1px solid #ffffff38;
     border-radius: 10px;
     transition-delay: 0.08s;
@@ -80,8 +87,6 @@
     background: transparent;
     color: #222222;
 }
-
-
 
 @media (max-width: 768px) {
     .mainHeader {

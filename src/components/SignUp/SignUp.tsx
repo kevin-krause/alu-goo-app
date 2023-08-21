@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import './SignUp.css'
 import { useNavigate } from 'react-router-dom'
 
-const Cadastro: React.FC = () => {
+const SignUp: React.FC = () => {
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
         password: '',
-        identification: '',
-        isCnpj: false
+        identification: ''
     })
 
+    const [isCnpj, setIsCnpj] = useState(false)
     const [buttonText, setButtonText] = useState('Cadastrar ✨')
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -20,22 +20,14 @@ const Cadastro: React.FC = () => {
             ...prevData,
             [name]: value
         }))
+        console.log(value)
     }
 
     const handleIdentificationChange = (identifier: string) => {
+        setIsCnpj(identifier === 'cnpj')
         setFormData(prevData => ({
             ...prevData,
-            isCnpj: identifier === 'cnpj',
             identification: ''
-        }))
-    }
-
-    const handleDocumentTypeChange = (identifier: string) => {
-        setFormData(prevData => ({
-            ...prevData,
-            isCnpj: identifier === 'cnpj',
-            identification: '',
-            identifier // Add this line to set the selected identifier (cnpj or cpf)
         }))
     }
 
@@ -52,24 +44,7 @@ const Cadastro: React.FC = () => {
         console.log('Form Data:', formData)
 
         try {
-            const userData = {
-                fullName: formData.fullName,
-                email: formData.email,
-                password: formData.password,
-                identification: formData.identification
-            }
-
-            // Aqui você pode realizar a requisição para a API de cadastro, por exemplo usando fetch ou axios
-            // await fetch('sua_url_da_api', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify(userData)
-            // })
-
-            // Depois de enviar para a API, você pode redirecionar o usuário para a próxima página
-            onCadastro()
+            // ... (rest of the code)
         } catch (error) {
             console.error('Erro ao enviar os dados para a API:', error)
         }
@@ -77,6 +52,7 @@ const Cadastro: React.FC = () => {
 
     const onCadastro = () => {
         navigate('/', { replace: true })
+        console.log('Form Data:', formData)
     }
 
     return (
@@ -88,7 +64,7 @@ const Cadastro: React.FC = () => {
                     <input
                         type="text"
                         name="fullName"
-                        placeholder="Nome Completo"
+                        // placeholder="Nome Completo"
                         value={formData.fullName}
                         onChange={handleInputChange}
                     />
@@ -96,7 +72,7 @@ const Cadastro: React.FC = () => {
                     <input
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        // placeholder="Email"
                         value={formData.email}
                         onChange={handleInputChange}
                     />
@@ -104,7 +80,7 @@ const Cadastro: React.FC = () => {
                     <input
                         type="password"
                         name="password"
-                        placeholder="Senha"
+                        // placeholder="Senha"
                         value={formData.password}
                         onChange={handleInputChange}
                     />
@@ -126,11 +102,15 @@ const Cadastro: React.FC = () => {
                         </button>
                     </div>
                     <input
-                        type="number"
-                        className="identification"
-                        placeholder={formData.isCnpj ? 'CNPJ' : 'CPF'}
-                        value={formData.identification}
-                        onChange={handleInputChange}
+                        onChange={event => {
+                            const { value } = event.target
+                            // Remove non-numeric characters
+                            const cleanedValue = value.replace(/\D/g, '')
+                            setFormData(prevData => ({
+                                ...prevData,
+                                identification: cleanedValue
+                            }))
+                        }}
                     />
                     <button
                         id="submitBtn"
@@ -138,6 +118,7 @@ const Cadastro: React.FC = () => {
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
                         className="button"
+                        onClick={onCadastro}
                     >
                         {buttonText}
                     </button>
@@ -147,4 +128,4 @@ const Cadastro: React.FC = () => {
     )
 }
 
-export default Cadastro
+export default SignUp

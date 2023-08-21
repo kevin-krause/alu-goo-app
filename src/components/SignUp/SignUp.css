@@ -55,7 +55,9 @@
 }
 
 .formInputsCadastro button {
+    width: fit-content;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px;
     background-color: #000000;
     color: white;
@@ -95,6 +97,16 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* .identification input::-webkit-outer-spin-button,
+.identification input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.identification input[type='number'] {
+    -moz-appearance: textfield;
+} */
 
 @media screen and (max-width: 1400px) {
     .formCadastro {
